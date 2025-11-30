@@ -585,7 +585,7 @@
 #testimonials {
   background: linear-gradient(135deg, #6b21a8, #7c3aed);
   position: relative;
-  padding-bottom: 8rem;
+  padding-block: 6rem;
 }
 
 .carousel-indicators {
@@ -719,9 +719,14 @@
   border-radius: 50%;
 }
 
+.carousel-item {
+  margin-bottom: 30px;
+}
+
 #faq {
   background-color: #f9fafb;
   padding-top: 5rem;
+  padding-bottom: 30px;
 }
 
 .faq-accordion {
@@ -874,7 +879,7 @@
   }
 
   .carousel-indicators {
-    bottom: -60px;
+    bottom: -50px;
   }
 
   .testimonial-card {
@@ -961,7 +966,7 @@
   }
 
   .carousel-indicators {
-    bottom: -50px;
+    bottom: -40px;
     margin-bottom: 2rem;
   }
 
