@@ -121,6 +121,31 @@
   background-color: #f9fafb;
 }
 
+.badge-with-lines {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-with-lines::before,
+.badge-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2.5px;
+  transform: translateY(-50%);
+}
+
+.badge-with-lines::before {
+  right: calc(100% + 15px);
+  background: linear-gradient(to left, #7b2cff, #d12dff, transparent);
+}
+
+.badge-with-lines::after {
+  left: calc(100% + 15px);
+  background: linear-gradient(to right, #7b2cff, #d12dff, transparent);
+}
+
 .text-gradient {
   background: linear-gradient(90deg, #7b2cff, #ff8c42);
   -webkit-background-clip: text;
@@ -677,5 +702,35 @@
 @media (max-width: 400px) {
   .hero {
     padding-top: 160%;
+  }
+}
+
+@media (max-width: 768px) {
+  .badge-with-lines::before,
+  .badge-with-lines::after {
+    width: 40px;
+  }
+
+  .badge-with-lines::before {
+    right: calc(100% + 10px);
+  }
+
+  .badge-with-lines::after {
+    left: calc(100% + 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-with-lines::before,
+  .badge-with-lines::after {
+    width: 25px;
+  }
+
+  .badge-with-lines::before {
+    right: calc(100% + 8px);
+  }
+
+  .badge-with-lines::after {
+    left: calc(100% + 8px);
   }
 }
